@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:drawable="@drawable/dropdown_open"
+        android:width="16dp"
+        android:top="11dp"
+        android:right="21dp"
+        android:bottom="11dp"
+        android:height="20dp"
+        />
+
+</layer-list>

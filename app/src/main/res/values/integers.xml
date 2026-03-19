@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="scrollview_weight_otp_top">1</integer>
+    <integer name="scrollview_weight_otp_bottom">1</integer>
+</resources>

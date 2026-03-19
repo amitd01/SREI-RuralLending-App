@@ -1,0 +1,98 @@
+<resources>
+    <string name="register">Register</string>
+    <string name="mobile_number">Mobile Number</string>
+    <string name="sm_code">SM Code</string>
+    <string name="srei_logo">SREI logo</string>
+    <string name="welcome_onboard_text">Welcome Onboard!</string>
+    <string name="the_grid_approved_text">The grid has approved your application</string>
+    <string name="verify_continue"><![CDATA[Verify & Continue]]></string>
+    <string name="enter_otp_code">Enter OTP Code</string>
+    <string name="title">TITLE</string>
+    <string name="remark">REMARK</string>
+    <string name="lead_id">LEAD ID:</string>
+    <string name="status">STATUS</string>
+    <string name="customer_name">Customer Name</string>
+    <string name="send_for_verification">send for verification</string>
+    <string name="upload_pan_card">Upload PAN Card</string>
+    <string name="upload_aadhar_card">Upload Aadhar Card</string>
+    <string name="u20b9_20_000">₹ 20,000</string>
+    <string name="calculate_installment">calculate installment</string>
+    <string name="calculated_installment_amount">calculated installment amount</string>
+    <string name="u20b9_10_00_000">₹ 10,00,000</string>
+    <string name="field">FIELD</string>
+    <string name="value">VALUE</string>
+    <string name="_10">10%</string>
+    <string name="half_yearly">Half Yearly</string>
+    <string name="pay_frequency">pay frequency</string>
+    <string name="_48_months">48 Months</string>
+    <string name="tenure">tenure</string>
+    <string name="irr">irr</string>
+    <string name="financed_amt">financed amt</string>
+    <string name="asset_cost">asset cost</string>
+    <string name="co_applicant">Co-Applicant</string>
+    <string name="_17322">#17322</string>
+    <string name="installment_calculator">Installment Calculator</string>
+    <string name="text_male">Male</string>
+    <string name="text_female">Female</string>
+    <string name="applicant_name">applicant name</string>
+    <string name="atul_singh">ATUL SINGH</string>
+    <string name="_91_9968497499">+91 9968497499</string>
+    <string name="maritial_status">Maritial status</string>
+    <string name="submit_applicant_detail">submit applicant detail</string>
+    <string name="submit_co_applicant_details">submit co applicant details</string>
+    <string name="submit_guarantor_form">submit guarantor form</string>
+    <string name="submit_tranaction_detail">submit tranaction detail</string>
+    <string name="father_husband_s_name">Father/Husband\'s Name</string>
+    <string name="co_applicant_name">Co Applicant name</string>
+    <string name="unmarried_daughter">unmarried daughter</string>
+    <string name="son">son</string>
+    <string name="spouse">spouse</string>
+    <string name="mother">mother</string>
+    <string name="father">father</string>
+    <string name="relationship_with_applicant">Relationship with applicant</string>
+    <string name="total_land_holding_coapplicant">Total agriculture land Holding CoApplicant</string>
+    <string name="fi_status">fi status</string>
+    <string name="negative">negative</string>
+    <string name="positive">positive</string>
+    <string name="proposed_asset_mrp">Proposed Asset MRP</string>
+    <string name="proposed_asset_dlp_nlp">proposed asset DLP/NLP</string>
+    <string name="loan_amount">Loan amount</string>
+    <string name="moratorium">Moratorium</string>
+    <string name="installments">Installments</string>
+    <string name="pdc_spdc">pdc/spdc</string>
+    <string name="flat_rate">flat rate</string>
+    <string name="documentation_charges">Documentation Charges</string>
+    <string name="processing_charges">Processing charges</string>
+    <string name="tractor_insurance_premium_amt">Tractor insurance premium amt</string>
+    <string name="credit_life_insurance_premium_amt">credit life insurance premium amt</string>
+    <string name="_91_9929739670">+91 9929739670</string>
+    <string name="manufacturing_year">manufacturing year</string>
+    <string name="chasis_no">chasis no</string>
+    <string name="engine_no">Engine No</string>
+    <string name="distance_of_applicant_from_dealer">distance of applicant from dealer</string>
+    <string name="Avenir_Book_01" value="1">Avenir-Book-01.ttf</string>
+    <string name="jp_queue">JP Queue</string>
+    <string name="co_applicant_address">CO-APPLICANT ADDRESS</string>
+    <string name="co_applicant_add">CO APPLICANT ADDRESS</string>
+    <string name="submit_asset_dealer_detail"><![CDATA[submit asset & dealer detail]]></string>
+    <string name="new_lead">New Lead</string>
+    <string-array name="co_applicant_address">
+        <item>  YES</item>
+        <item>  NO</item>
+    </string-array>
+
+    <string-array name="relationship_with_applicant">
+        <item>FATHER</item>
+        <item>MOTHER</item>
+        <item>SPOUSE</item>
+        <item>SON</item>
+        <item>UNMARRIED DAUGHTER</item>
+        <item>Others</item>
+    </string-array>
+
+    <string-array name="fi_status">
+        <item>FI STATUS</item>
+        <item>POSITIVE</item>
+        <item>NEGATIVE</item>
+    </string-array>
+</resources>

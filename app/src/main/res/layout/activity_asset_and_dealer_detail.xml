@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/assetRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/action_bar_container"
+        layout="@layout/appbar" />
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/calculator_head"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_item_head"
+                android:orientation="horizontal">
+
+                <jaanpehchan.rural.srei.CustomFontTextView
+                    android:id="@+id/text_head_field"
+                    style="@style/TextHeadStyle"
+                    android:layout_width="@dimen/width_weight"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/field"
+                    app:fontName="Avenir_Book_01" />
+
+                <include layout="@layout/separator_vertical_view" />
+
+
+                <jaanpehchan.rural.srei.CustomFontTextView
+                    android:id="@+id/text_head_value"
+                    style="@style/TextHeadStyle"
+                    android:layout_width="@dimen/width_weight"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/value"
+                    app:fontName="Avenir_Book_01" />
+
+            </LinearLayout>
+
+
+            <include layout="@layout/separator_head_horizontal_view" />
+
+            <LinearLayout
+                android:id="@+id/scroll_view_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="85dp">
+
+                <ScrollView
+                    android:id="@+id/scroll_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <ExpandableListView
+                                android:id="@+id/expandable_listView_make"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:choiceMode="singleChoice"
+                                android:divider="@null"
+                                android:groupIndicator="@drawable/rotate_drawable"
+                                android:layoutDirection="rtl" />
+                        </LinearLayout>
+
+                        <include layout="@layout/separator_horizontal_view" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+
+                            <ExpandableListView
+                                android:id="@+id/expandable_listView_model"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:choiceMode="singleChoice"
+                                android:divider="@null"
+                                android:groupIndicator="@drawable/rotate_drawable"
+                                android:layoutDirection="rtl" />
+                        </LinearLayout>
+
+                        <include layout="@layout/separator_horizontal_view" />
+
+
+                        <LinearLayout
+                            style="@style/PaddingItem"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+
+                            <jaanpehchan.rural.srei.CustomFontTextView
+                                android:id="@+id/text_asset_delivery_status"
+                                style="@style/TextItemStyle"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="6dp"
+                                android:text="asset delivery status" />
+
+                            <RadioGroup
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="4dp"
+                                android:layout_marginTop="2dp"
+                                android:gravity="center|center_vertical"
+                                android:orientation="horizontal"
+                                android:paddingBottom="6dp">
+
+                                <RadioButton
+                                    android:id="@+id/delivered"
+                                    style="@style/MyRadioButtonStyle"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="@dimen/radio_button_separation"
+                                    android:layout_marginRight="@dimen/radio_button_separation"
+                                    android:enabled="true"
+                                    android:text="Delivered"
+                                    android:textAllCaps="true"
+                                    android:textSize="@dimen/textsize_item" />
+
+
+                                <RadioButton
+                                    android:id="@+id/not_delivered"
+                                    style="@style/MyRadioButtonStyle"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="not delivered" />
+                            </RadioGroup>
+                        </LinearLayout>
+
+                        <include layout="@layout/separator_horizontal_view" />
+
+
+                        <LinearLayout
+                            style="@style/PaddingItem"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <jaanpehchan.rural.srei.CustomFontTextView
+                                android:id="@+id/text_manufacturing_year"
+                                style="@style/TextItemStyle"
+                                android:layout_width="@dimen/width_weight"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Manufacturing Year" />
+
+                            <jaanpehchan.rural.srei.CustomFontEditText
+                                android:id="@+id/text_manufacturing_year_val"
+                                style="@style/TextItemValueStyle"
+                                android:layout_width="@dimen/width_weight"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                tools:text="2011" />
+                        </LinearLayout>
+
+                        <include layout="@layout/separator_horizontal_view" />
+
+                        <LinearLayout
+                            style="@style/PaddingItem"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <jaanpehchan.rural.srei.CustomFontTextView
+                                android:id="@+id/text_delivery_Date"
+                                style="@style/TextItemStyle"
+                                android:layout_width="@dimen/width_weight"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="delivery date" />
+
+
+                            <jaanpehchan.rural.srei.CustomFontEditText
+                                android:id="@+id/text_delivery_Date_val"
+                                style="@style/TextItemValueStyle"
+                                android:layout_width="@dimen/width_weight"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:inputType="none"
+                                android:focusable="false"
+                                tools:text="43348364923" />
+                        </LinearLayout>
+
+                        <include layout="@layout/separator_horizontal_view" />
+
+                        <LinearLayout
+                            style="@style/PaddingItem"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <jaanpehchan.rural.srei.CustomFontTextView
+                                android:id="@+id/text_engine_no"
+                                style="@style/TextItemStyle"
+                                android:layout_width="@dimen/width_weight"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@string/engine_no" />
+
+                            <jaanpehchan.rural.srei.CustomFontEditText
+                                android:id="@+id/text_engine_no_val"
+                                style="@style/TextItemValueStyle"
+                                android:layout_width="@dimen/width_weight"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                tools:text="43348364923" />
+                        </LinearLayout>
+
+                        <include layout="@layout/separator_horizontal_view" />
+
+                        <LinearLayout
+                            style="@style/PaddingItem"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <jaanpehchan.rural.srei.CustomFontTextView
+                                android:id="@+id/text_chasis_no"
+                                style="@style/TextItemStyle"
+                                android:layout_width="@dimen/width_weight"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@string/chasis_no" />
+
+
+                            <jaanpehchan.rural.srei.CustomFontEditText
+                                android:id="@+id/text_chasis_no_val"
+                                style="@style/TextItemValueStyle"
+                                android:layout_width="@dimen/width_weight"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                tools:text="43348364923" />
+                        </LinearLayout>
+
+                        <include layout="@layout/separator_horizontal_view" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+
+                            <ExpandableListView
+                                android:id="@+id/list_actual_user"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:choiceMode="singleChoice"
+                                android:divider="@null"
+                                android:groupIndicator="@drawable/rotate_drawable"
+                                android:layoutDirection="rtl" />
+                        </LinearLayout>
+
+                        <include layout="@layout/separator_horizontal_view" />
+
+                        <LinearLayout
+                            style="@style/PaddingItem"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <jaanpehchan.rural.srei.CustomFontTextView
+                                android:id="@+id/text_asset_located_at"
+                                style="@style/TextItemStyle"
+                                android:layout_width="@dimen/width_weight"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="asset located at" />
+
+                            <jaanpehchan.rural.srei.CustomFontEditText
+                                android:id="@+id/text_asset_located_at_val"
+                                style="@style/TextItemValueStyle"
+                                android:layout_width="@dimen/width_weight"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                tools:text="43348364923" />
+                        </LinearLayout>
+
+                        <include layout="@layout/separator_horizontal_view" />
+
+
+                        <LinearLayout
+                            style="@style/PaddingItem"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <jaanpehchan.rural.srei.CustomFontTextView
+                                android:id="@+id/text_asset_condition"
+                                style="@style/TextItemStyle"
+                                android:layout_width="@dimen/width_weight"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="asset condition" />
+
+                            <jaanpehchan.rural.srei.CustomFontEditText
+                                android:id="@+id/text_asset_condition_val"
+                                style="@style/TextItemValueStyle"
+                                android:layout_width="@dimen/width_weight"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                tools:text="43348364923" />
+                        </LinearLayout>
+
+                        <include layout="@layout/separator_horizontal_view" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <ExpandableListView
+                                android:id="@+id/list_proposed_asset_application"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:choiceMode="singleChoice"
+                                android:divider="@null"
+                                android:groupIndicator="@drawable/rotate_drawable"
+                                android:layoutDirection="rtl" />
+                        </LinearLayout>
+
+                        <include layout="@layout/separator_horizontal_view" />
+
+                        <LinearLayout
+                            style="@style/PaddingItem"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <jaanpehchan.rural.srei.CustomFontTextView
+                                android:id="@+id/text_dealer_location"
+                                style="@style/TextItemStyle"
+                                android:layout_width="@dimen/width_weight"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="dealer location" />
+
+                            <jaanpehchan.rural.srei.CustomFontEditText
+                                android:id="@+id/text_dealer_location_val"
+                                style="@style/TextItemValueStyle"
+                                android:layout_width="@dimen/width_weight"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                tools:text="43348364923" />
+                        </LinearLayout>
+
+                        <include layout="@layout/separator_horizontal_view" />
+
+                        <LinearLayout
+                            style="@style/PaddingItem"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <jaanpehchan.rural.srei.CustomFontTextView
+                                android:id="@+id/text_distance_of_applicant"
+                                style="@style/TextItemStyle"
+                                android:layout_width="@dimen/width_weight"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@string/distance_of_applicant_from_dealer" />
+
+                            <jaanpehchan.rural.srei.CustomFontEditText
+                                android:id="@+id/text_distance_of_applicant_val"
+                                style="@style/TextItemValueStyle"
+                                android:layout_width="@dimen/width_weight"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                tools:text="23 Meteres" />
+                        </LinearLayout>
+
+                        <include layout="@layout/separator_horizontal_view" />
+
+                    </LinearLayout>
+                </ScrollView>
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <ImageView
+            android:id="@+id/image_button_asset_dealer_detail"
+            android:layout_width="66dp"
+            android:layout_height="66dp"
+            android:layout_marginBottom="35dp"
+            android:contentDescription="TODO"
+            android:elevation="8dp"
+            android:src="@drawable/submit_button"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/button_asset_and_dealer_detail"
+            style="@style/ButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:text="@string/submit_asset_dealer_detail"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </android.support.constraint.ConstraintLayout>
+</LinearLayout>

@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/nav_menu_bg_overlay">
+
+    <ImageView
+        android:id="@+id/image1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="TODO"
+        android:paddingBottom="22dp"
+        android:src="@drawable/group"
+        app:layout_constraintBottom_toBottomOf="@id/lead_details"
+        app:layout_constraintLeft_toLeftOf="@id/lead_details"
+        app:layout_constraintRight_toRightOf="@id/lead_details"
+        app:layout_constraintTop_toTopOf="@id/lead_details" />
+
+    <jaanpehchan.rural.srei.CustomFontTextView
+        android:id="@+id/lead_details"
+        style="@style/NavImageStyle"
+        android:layout_width="0dp"
+        android:layout_height="99dp"
+        android:paddingTop="22dp"
+        android:text="@string/new_lead"
+        app:layout_constraintBottom_toTopOf="@+id/installmentCalculator"
+        app:layout_constraintEnd_toStartOf="@+id/jp_queue"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/image2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="TODO"
+        android:paddingBottom="22dp"
+        android:src="@drawable/group"
+        app:layout_constraintBottom_toBottomOf="@id/jp_queue"
+        app:layout_constraintLeft_toLeftOf="@id/jp_queue"
+        app:layout_constraintRight_toRightOf="@id/jp_queue"
+        app:layout_constraintTop_toTopOf="@id/jp_queue" />
+
+    <jaanpehchan.rural.srei.CustomFontTextView
+        android:id="@+id/jp_queue"
+        style="@style/NavImageStyle"
+        android:layout_width="0dp"
+        android:layout_height="98dp"
+        android:paddingTop="22dp"
+        android:text="@string/jp_queue"
+        app:layout_constraintBottom_toTopOf="@+id/horizontal_sep_one"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toEndOf="@+id/lead_details"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <View
+        android:id="@+id/horizontal_sep_one"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/lead_details" />
+
+    <ImageView
+        android:id="@+id/image3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="TODO"
+        android:paddingBottom="44dp"
+        android:src="@drawable/group"
+        app:layout_constraintBottom_toBottomOf="@id/installmentCalculator"
+        app:layout_constraintLeft_toLeftOf="@id/installmentCalculator"
+        app:layout_constraintRight_toRightOf="@id/installmentCalculator"
+        app:layout_constraintTop_toTopOf="@id/installmentCalculator" />
+
+    <jaanpehchan.rural.srei.CustomFontTextView
+        android:id="@+id/installmentCalculator"
+        style="@style/NavImageStyle"
+        android:layout_width="0dp"
+        android:layout_height="99dp"
+        android:paddingTop="22dp"
+        android:paddingLeft="22dp"
+        android:paddingRight="22dp"
+android:minLines="2"
+        android:inputType="textMultiLine"
+        android:text="@string/installment_calculator"
+        app:layout_constraintBottom_toTopOf="@+id/list_item5"
+        app:layout_constraintEnd_toStartOf="@+id/list_item4"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/horizontal_sep_one" />
+
+    <jaanpehchan.rural.srei.CustomFontTextView
+        android:id="@+id/list_item4"
+        style="@style/NavImageStyle"
+        android:layout_width="0dp"
+        android:layout_height="98dp"
+        android:paddingTop="22dp"
+        android:text="@string/new_lead"
+        app:layout_constraintBottom_toTopOf="@+id/horizontal_sep_two"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toEndOf="@+id/installmentCalculator"
+        app:layout_constraintTop_toBottomOf="@+id/horizontal_sep_one" />
+
+    <ImageView
+        android:id="@+id/image4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="TODO"
+        android:paddingBottom="22dp"
+        android:src="@drawable/group"
+        app:layout_constraintBottom_toBottomOf="@id/list_item4"
+        app:layout_constraintLeft_toLeftOf="@id/list_item4"
+        app:layout_constraintRight_toRightOf="@id/list_item4"
+        app:layout_constraintTop_toTopOf="@id/list_item4" />
+
+    <View
+        android:id="@+id/horizontal_sep_two"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/installmentCalculator" />
+
+    <jaanpehchan.rural.srei.CustomFontTextView
+        android:id="@+id/list_item5"
+        style="@style/NavImageStyle"
+        android:layout_width="0dp"
+        android:layout_height="99dp"
+        android:paddingTop="22dp"
+        android:text="@string/new_lead"
+        app:layout_constraintBottom_toTopOf="@+id/list_item7"
+        app:layout_constraintEnd_toStartOf="@+id/list_item6"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/horizontal_sep_two" />
+
+    <ImageView
+        android:id="@+id/image5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="TODO"
+        android:paddingBottom="22dp"
+        android:src="@drawable/group"
+        app:layout_constraintBottom_toBottomOf="@id/list_item5"
+        app:layout_constraintLeft_toLeftOf="@id/list_item5"
+        app:layout_constraintRight_toRightOf="@id/list_item5"
+        app:layout_constraintTop_toTopOf="@id/list_item5" />
+
+    <jaanpehchan.rural.srei.CustomFontTextView
+        android:id="@+id/list_item6"
+        style="@style/NavImageStyle"
+        android:layout_width="0dp"
+        android:layout_height="98dp"
+        android:paddingTop="22dp"
+        android:text="@string/new_lead"
+        app:layout_constraintBottom_toTopOf="@+id/list_item8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toEndOf="@+id/list_item5"
+        app:layout_constraintTop_toBottomOf="@+id/horizontal_sep_two" />
+
+    <ImageView
+        android:id="@+id/image6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="TODO"
+        android:paddingBottom="22dp"
+        android:src="@drawable/group"
+        app:layout_constraintBottom_toBottomOf="@id/list_item6"
+        app:layout_constraintLeft_toLeftOf="@id/list_item6"
+        app:layout_constraintRight_toRightOf="@id/list_item6"
+        app:layout_constraintTop_toTopOf="@id/list_item6" />
+
+    <View
+        android:id="@+id/horizontal_sep_three"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/list_item6" />
+
+    <ImageView
+        android:id="@+id/image7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="TODO"
+        android:paddingBottom="22dp"
+        android:src="@drawable/group"
+        app:layout_constraintBottom_toBottomOf="@id/list_item7"
+        app:layout_constraintLeft_toLeftOf="@id/list_item7"
+        app:layout_constraintRight_toRightOf="@id/list_item7"
+        app:layout_constraintTop_toTopOf="@id/list_item7" />
+
+    <jaanpehchan.rural.srei.CustomFontTextView
+        android:id="@+id/list_item7"
+        style="@style/NavImageStyle"
+        android:layout_width="0dp"
+        android:layout_height="99dp"
+        android:paddingTop="22dp"
+        android:text="@string/new_lead"
+        app:layout_constraintBottom_toTopOf="@+id/srei_logo"
+        app:layout_constraintEnd_toStartOf="@+id/list_item8"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/list_item5" />
+
+    <jaanpehchan.rural.srei.CustomFontTextView
+        android:id="@+id/list_item8"
+        style="@style/NavImageStyle"
+        android:layout_width="0dp"
+        android:layout_height="98dp"
+        android:paddingTop="22dp"
+        android:text="@string/new_lead"
+        app:layout_constraintBottom_toTopOf="@+id/srei_logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toEndOf="@+id/list_item7"
+        app:layout_constraintTop_toBottomOf="@+id/horizontal_sep_three" />
+
+    <ImageView
+        android:id="@+id/image8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="TODO"
+        android:paddingBottom="22dp"
+        android:src="@drawable/group"
+        app:layout_constraintBottom_toBottomOf="@id/list_item8"
+        app:layout_constraintLeft_toLeftOf="@id/list_item8"
+        app:layout_constraintRight_toRightOf="@id/list_item8"
+        app:layout_constraintTop_toTopOf="@id/list_item8" />
+
+
+    <View
+        android:id="@+id/vertical_separator_one"
+        android:layout_width="1dp"
+        android:layout_height="0dp"
+        android:background="@color/white"
+        app:layout_constraintBottom_toTopOf="@id/srei_logo"
+        app:layout_constraintLeft_toRightOf="@id/lead_details"
+        app:layout_constraintVertical_chainStyle="spread" />
+
+    <ImageView
+        android:id="@+id/srei_logo"
+        android:layout_width="180dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="16dp"
+        android:contentDescription="TODO"
+        android:src="@drawable/srei_logo_trans_white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/list_item7"
+        app:layout_constraintVertical_chainStyle="spread" />
+
+
+</android.support.constraint.ConstraintLayout>

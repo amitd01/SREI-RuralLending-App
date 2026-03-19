@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:background="@drawable/bg"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="@integer/scrollview_weight_otp_top">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/seri_logo"
+                android:layout_width="@dimen/logo_width"
+                android:layout_height="@dimen/logo_height"
+                android:layout_gravity="center"
+                android:contentDescription="@string/srei_logo"
+                android:src="@drawable/srei_logo_trans_white" />
+        </LinearLayout>
+    </ScrollView>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="@integer/scrollview_weight_otp_bottom">
+
+        <LinearLayout
+            android:id="@+id/emp_login"
+            android:layout_width="@dimen/login_details_container_width"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/margin_register"
+            android:background="@color/white"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <ImageView
+                    style="@style/SreiImageLogin"
+                    android:layout_width="@dimen/icon_width"
+                    android:layout_height="@dimen/icon_height"
+                    android:contentDescription="TODO"
+                    android:src="@drawable/lock_icon" />
+
+                <jaanpehchan.rural.srei.CustomFontEditText
+                    android:id="@+id/otp_textview"
+                    style="@style/SreiEditLogin"
+                    android:layout_width="match_parent"
+                    android:layout_height="55.35dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginRight="10dp"
+                    android:hint="@string/enter_otp_code"
+                    android:inputType="number"
+                    app:fontName="Avenir_Book_01" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height"
+                android:elevation="8dp">
+
+                <Button
+                    android:id="@+id/verify_and_continue_button"
+                    style="@style/SreiButtonLogin"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/button_height"
+                    android:elevation="8dp"
+                    android:text="@string/verify_continue" />
+
+                <ImageView
+                    android:id="@+id/image_next_arrow"
+                    android:layout_width="@dimen/image_next"
+                    android:layout_height="@dimen/image_next"
+                    android:layout_alignEnd="@id/verify_and_continue_button"
+                    android:layout_alignRight="@id/verify_and_continue_button"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/srei_login_button_margin_end"
+                    android:layout_marginRight="@dimen/srei_login_button_margin_end"
+                    android:elevation="8dp"
+                    android:src="@drawable/right_arrow_circle_icon" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

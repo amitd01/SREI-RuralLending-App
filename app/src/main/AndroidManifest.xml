@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="jaanpehchan.rural.srei">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label=""
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:node="replace">
+        <activity
+            android:name=".MainActivity"
+            android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
+        <activity
+            android:name=".Main2Activity"
+            android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".OtpSuccessfulActivity" />
+        <activity
+            android:name=".JpQueue"
+            android:parentActivityName=".NavMenuActivity"
+            tools:targetApi="jelly_bean">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".NavMenuActivity" />
+        </activity>
+        <activity android:name=".LeadDetailsActivity" />
+        <activity android:name=".Checklist" />
+        <activity android:name=".FeedbackFormActivity" />
+        <activity
+            android:name=".NavMenuActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".InstallmentCalculatorActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ApplicantDetailsActivity"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".CoApplicantActivityDetails"
+            android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".GuarantorDetailsActivity" />
+        <activity
+            android:name=".TransactionDetails"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".AssetAndDealerDetail"
+            android:windowSoftInputMode="adjustResize" />
+    </application>
+
+</manifest>

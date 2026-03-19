@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/nav_menu_bg_overlay"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:baselineAligned="false"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/lead_details"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            tools:ignore="NestedWeights">
+
+            <ImageView
+                android:layout_width="@dimen/nav_image_size"
+                android:layout_height="@dimen/nav_image_size"
+                android:contentDescription="@string/new_lead"
+                android:src="@drawable/group" />
+
+            <jaanpehchan.rural.srei.CustomFontTextView
+                android:id="@+id/list_item1"
+                style="@style/NavTextStyle"
+                android:text="@string/new_lead"
+                android:layout_width="@dimen/nav_text_width"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <include layout="@layout/separator_for_nav_menu_vertical" />
+
+        <LinearLayout
+            android:id="@+id/jp_queue"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="@dimen/nav_image_size"
+                android:layout_height="@dimen/nav_image_size"
+                android:contentDescription="@string/jp_queue"
+                android:src="@drawable/group" />
+
+            <jaanpehchan.rural.srei.CustomFontTextView
+                android:id="@+id/list_item2"
+                style="@style/NavTextStyle"
+                android:text="@string/jp_queue"
+                android:layout_width="@dimen/nav_text_width"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <include layout="@layout/separator_for_nav_menu_horizontal" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:baselineAligned="false"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/installmentCalculator"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            tools:ignore="NestedWeights">
+
+            <ImageView
+                android:layout_width="@dimen/nav_image_size"
+                android:layout_height="@dimen/nav_image_size"
+                android:contentDescription="@string/installment_calculator"
+                android:src="@drawable/group" />
+
+            <jaanpehchan.rural.srei.CustomFontTextView
+                android:id="@+id/list_item3"
+                style="@style/NavTextStyle"
+                android:text="@string/installment_calculator"
+                android:layout_width="@dimen/nav_text_width"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <include layout="@layout/separator_for_nav_menu_vertical" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="@dimen/nav_image_size"
+                android:layout_height="@dimen/nav_image_size"
+                android:contentDescription="TODO"
+                android:src="@drawable/group" />
+
+            <jaanpehchan.rural.srei.CustomFontTextView
+                android:id="@+id/list_item4"
+                style="@style/NavTextStyle"
+                android:layout_width="@dimen/nav_text_width"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <include layout="@layout/separator_for_nav_menu_horizontal" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:baselineAligned="false"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            tools:ignore="NestedWeights">
+
+            <ImageView
+                android:layout_width="@dimen/nav_image_size"
+                android:layout_height="@dimen/nav_image_size"
+                android:contentDescription="TODO"
+                android:src="@drawable/group" />
+
+
+            <jaanpehchan.rural.srei.CustomFontTextView
+                android:id="@+id/list_item5"
+                style="@style/NavTextStyle"
+                android:layout_width="@dimen/nav_text_width"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <include layout="@layout/separator_for_nav_menu_vertical" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="@dimen/nav_image_size"
+                android:layout_height="@dimen/nav_image_size"
+                android:contentDescription="TODO"
+                android:src="@drawable/group" />
+
+            <jaanpehchan.rural.srei.CustomFontTextView
+                android:id="@+id/list_item6"
+                style="@style/NavTextStyle"
+                android:layout_width="@dimen/nav_text_width"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <include layout="@layout/separator_for_nav_menu_horizontal" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:baselineAligned="false"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            tools:ignore="NestedWeights">
+
+            <ImageView
+                android:layout_width="@dimen/nav_image_size"
+                android:layout_height="@dimen/nav_image_size"
+                android:contentDescription="TODO"
+                android:src="@drawable/group" />
+
+            <jaanpehchan.rural.srei.CustomFontTextView
+                android:id="@+id/list_item7"
+                style="@style/NavTextStyle"
+                android:layout_width="@dimen/nav_text_width"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <include layout="@layout/separator_for_nav_menu_vertical" />
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="@dimen/nav_image_size"
+                android:layout_height="@dimen/nav_image_size"
+                android:contentDescription="TODO"
+                android:src="@drawable/group" />
+
+            <jaanpehchan.rural.srei.CustomFontTextView
+                android:id="@+id/list_item8"
+                style="@style/NavTextStyle"
+                android:layout_width="@dimen/nav_text_width"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="@dimen/nav_margin_bottom"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="@dimen/nav_srei_logo_width"
+            android:layout_height="@dimen/nav_srei_logo_height"
+            android:contentDescription="@string/srei_logo"
+            android:src="@drawable/srei_logo_trans_white" />
+    </LinearLayout>
+
+
+</LinearLayout>

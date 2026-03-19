@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/coApplicantRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/action_bar_container"
+        layout="@layout/appbar" />
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/calculator_head"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_item_head"
+                android:orientation="horizontal">
+
+                <jaanpehchan.rural.srei.CustomFontTextView
+                    android:id="@+id/text_head_field"
+                    style="@style/TextHeadStyle"
+                    android:layout_width="@dimen/width_weight"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/field"
+                    app:fontName="Avenir_Book_01" />
+
+                <include layout="@layout/separator_vertical_view" />
+
+                <jaanpehchan.rural.srei.CustomFontTextView
+                    android:id="@+id/text_head_value"
+                    style="@style/TextHeadStyle"
+                    android:layout_width="@dimen/width_weight"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/value"
+                    app:fontName="Avenir_Book_01" />
+
+            </LinearLayout>
+
+
+            <include layout="@layout/separator_head_horizontal_view" />
+
+
+            <LinearLayout
+                android:id="@+id/scroll_view_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="85dp">
+
+                <ScrollView
+                    android:id="@+id/scroll_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            style="@style/PaddingItem"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <jaanpehchan.rural.srei.CustomFontTextView
+                                android:id="@+id/text_co_applicant_name"
+                                style="@style/TextItemStyle"
+                                android:layout_width="@dimen/width_weight"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@string/co_applicant_name" />
+
+                            <jaanpehchan.rural.srei.CustomFontEditText
+                                android:id="@+id/text_co_applicant_name_val"
+                                style="@style/TextItemValueStyle"
+                                android:layout_width="@dimen/width_weight"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:text="@string/atul_singh" />
+                        </LinearLayout>
+
+                        <include layout="@layout/separator_horizontal_view" />
+
+                        <LinearLayout
+                            style="@style/PaddingItem"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <jaanpehchan.rural.srei.CustomFontTextView
+                                android:id="@+id/text_husband_father"
+                                style="@style/TextItemStyle"
+                                android:layout_width="@dimen/width_weight"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@string/father_husband_s_name" />
+
+                            <jaanpehchan.rural.srei.CustomFontEditText
+                                android:id="@+id/text_husband_father_val"
+                                style="@style/TextItemValueStyle"
+                                android:layout_width="@dimen/width_weight"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:text="@string/u20b9_10_00_000" />
+                        </LinearLayout>
+
+                        <include layout="@layout/separator_horizontal_view" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <ExpandableListView
+                                android:id="@+id/list_co_address"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:choiceMode="singleChoice"
+                                android:divider="@null"
+                                android:groupIndicator="@drawable/rotate_drawable"
+                                android:layoutDirection="rtl" />
+                        </LinearLayout>
+
+                        <include layout="@layout/separator_horizontal_view" />
+
+                        <LinearLayout
+                            style="@style/PaddingItem"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <jaanpehchan.rural.srei.CustomFontTextView
+                                android:id="@+id/text_mobile_no"
+                                style="@style/TextItemStyle"
+                                android:layout_width="@dimen/width_weight"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@string/mobile_number" />
+
+                            <jaanpehchan.rural.srei.CustomFontEditText
+                                android:id="@+id/text_mobile_no_val"
+                                style="@style/TextItemValueStyle"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:text="@string/_91_9968497499" />
+                        </LinearLayout>
+
+                        <include layout="@layout/separator_horizontal_view" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <ExpandableListView
+                                android:id="@+id/relationship_with_applicant"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:choiceMode="singleChoice"
+                                android:divider="@null"
+                                android:groupIndicator="@drawable/rotate_drawable"
+                                android:layoutDirection="rtl" />
+
+                        </LinearLayout>
+
+                        <include layout="@layout/separator_horizontal_view" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+
+                            <ExpandableListView
+                                android:id="@+id/list_co_appl_background"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:choiceMode="singleChoice"
+                                android:divider="@null"
+                                android:dividerHeight="0dp"
+                                android:groupIndicator="@drawable/rotate_drawable"
+                                android:layoutDirection="rtl" />
+                        </LinearLayout>
+
+                        <include layout="@layout/separator_horizontal_view" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <ExpandableListView
+                                android:id="@+id/list_residential_status"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:choiceMode="singleChoice"
+                                android:divider="@null"
+                                android:dividerHeight="0dp"
+                                android:groupIndicator="@drawable/rotate_drawable"
+                                android:layoutDirection="rtl" />
+                        </LinearLayout>
+
+                        <include layout="@layout/separator_horizontal_view" />
+
+                        <LinearLayout
+                            style="@style/PaddingItem"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <jaanpehchan.rural.srei.CustomFontTextView
+                                android:id="@+id/text_total_agriculture_land"
+                                style="@style/TextItemStyle"
+                                android:layout_width="@dimen/width_weight"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@string/total_land_holding_coapplicant" />
+
+                            <jaanpehchan.rural.srei.CustomFontEditText
+                                android:id="@+id/text_total_agriculture_land_val"
+                                style="@style/TextItemValueStyle"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:text="@string/_91_9968497499" />
+                        </LinearLayout>
+
+                        <include layout="@layout/separator_horizontal_view" />
+
+
+                        <LinearLayout
+                            style="@style/PaddingItem"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <jaanpehchan.rural.srei.CustomFontTextView
+                                android:id="@+id/text_fi_status"
+                                style="@style/TextItemStyle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="6dp"
+                                android:text="@string/fi_status" />
+
+                            <RadioGroup
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="4dp"
+                                android:layout_marginTop="2dp"
+                                android:gravity="center|center_vertical"
+                                android:orientation="horizontal"
+                                android:paddingBottom="6dp">
+
+                                <RadioButton
+                                    android:id="@+id/positive"
+                                    style="@style/MyRadioButtonStyle"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="@dimen/radio_button_separation"
+                                    android:layout_marginRight="@dimen/radio_button_separation"
+                                    android:enabled="true"
+                                    android:text="@string/positive"
+                                    android:textAllCaps="true"
+                                    android:textSize="@dimen/textsize_item" />
+
+
+                                <RadioButton
+                                    android:id="@+id/negative"
+                                    style="@style/MyRadioButtonStyle"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/negative" />
+                            </RadioGroup>
+                        </LinearLayout>
+
+                        <include layout="@layout/separator_horizontal_view" />
+
+                    </LinearLayout>
+                </ScrollView>
+            </LinearLayout>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/button_co_applicant_submit"
+            android:layout_width="66dp"
+            android:layout_height="66dp"
+            android:layout_marginBottom="35dp"
+            android:contentDescription="TODO"
+            android:elevation="8dp"
+            android:src="@drawable/submit_button"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/button_co_applicant_submit_detail"
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            style="@style/ButtonStyle"
+            android:text="@string/submit_co_applicant_details"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </android.support.constraint.ConstraintLayout>
+</LinearLayout>

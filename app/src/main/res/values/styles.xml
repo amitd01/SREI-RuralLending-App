@@ -1,0 +1,114 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.TextStyle">
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:textColor">@color/head</item>
+    </style>
+
+    <style name="ButtonStyle">
+        <item name="android:background">@color/button_background_color</item>
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/text_button_size</item>
+    </style>
+
+    <style name="linear_layout">
+        <item name="android:background">@drawable/btn_radius</item>
+    </style>
+
+    <style name="NavImageStyle">
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/nav_text_color</item>
+        <item name="android:textSize">15sp</item>
+        <item name="fontName">Avenir_Book_01</item>
+    </style>
+
+    <style name="MyRadioButtonStyle" parent="@android:style/Widget.CompoundButton.RadioButton">
+        <item name="android:button">@drawable/custom_btn_radio</item>
+        <item name="android:padding">@dimen/item_padding</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textSize">@dimen/textsize_item</item>
+
+    </style>
+
+    <style name="AppTheme.Separator">
+        <item name="android:right">21dp</item>
+        <item name="android:left">21dp</item>
+    </style>
+
+    <style name="PaddingItem">
+        <item name="android:paddingTop">13dp</item>
+        <item name="android:paddingBottom">13dp</item>
+        <item name="android:paddingLeft">21dp</item>
+        <item name="android:paddingRight">21dp</item>
+    </style>
+
+    <style name="TextHeadStyle">
+        <item name="fontName">Avenir_Book_01</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/head</item>
+        <item name="android:textSize">@dimen/textsize_head</item>
+    </style>
+
+    <style name="TextItemStyle">
+        <item name="fontName">Avenir_Book_01</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textColor">@color/item</item>
+        <item name="android:textSize">@dimen/textsize_item</item>
+    </style>
+
+    <style name="TextItemValueStyle">
+        <item name="android:hint">@string/compulsory</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:gravity">end|center_vertical</item>
+        <item name="android:inputType">textCapCharacters</item>
+        <item name="android:textColor">@color/item_value</item>
+        <item name="android:textSize">@dimen/textsize_item</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="fontName">Avenir_Book_01</item>
+    </style>
+
+    <style name="SreiEditLogin">
+        <item name="android:background">@color/white</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textColorHint">@color/hint_text_color</item>
+    </style>
+
+    <style name="SreiImageLogin">
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_margin">@dimen/icon_margin</item>
+        <item name="android:background">@color/white</item>
+    </style>
+
+    <style name="SreiButtonLogin">
+
+        <item name="android:paddingRight">@dimen/padding_register</item>
+        <item name="android:paddingLeft">@dimen/padding_register</item>
+        <item name="android:gravity">center_horizontal|center_vertical</item>
+        <item name="android:background">@color/button_background_color</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/text_button_size</item>
+    </style>
+
+    <style name="NavTextStyle">
+        <item name="android:gravity">center</item>
+        <item name="android:text">@string/new_lead</item>
+        <item name="android:textColor">@color/nav_text_color</item>
+        <item name="android:textSize">15sp</item>
+        <item name="fontName">Avenir_Book_01</item>
+    </style>
+
+    <string name="compulsory">*Compulsory</string>
+</resources>

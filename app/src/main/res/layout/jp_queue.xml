@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/action_bar_container"
+        layout="@layout/appbar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="53dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+
+                <jaanpehchan.rural.srei.CustomFontTextView
+                    android:id="@+id/head_lead_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="LEAD ID"
+                    android:textColor="#000000"
+                    android:textSize="15sp"
+                    app:fontName="Avenir_Book_01" />
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:contentDescription="TODO"
+                    android:src="@drawable/sort_icon" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="@color/button_background_color" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="34dp"
+            android:background="@color/separator" />
+
+        <jaanpehchan.rural.srei.CustomFontTextView
+            android:id="@+id/head_status"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:width="0dp"
+            android:gravity="center"
+            android:paddingLeft="10dp"
+            android:text="STATUS"
+            android:textColor="#000000"
+            android:textSize="15sp"
+            app:fontName="Avenir_Book_01" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="34dp"
+            android:background="@color/separator" />
+
+
+        <jaanpehchan.rural.srei.CustomFontTextView
+            android:id="@+id/head_remark"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:width="0dp"
+            android:gravity="center"
+            android:text="REMARK"
+            android:textColor="#000000"
+            android:textSize="15sp"
+            app:fontName="Avenir_Book_01" />
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

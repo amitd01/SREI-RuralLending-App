@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="text_button_size">22sp</dimen>
+    <dimen name="logo_width">250dp</dimen>
+    <dimen name="logo_height">126dp</dimen>
+    <dimen name="icon_width">35dp</dimen>
+    <dimen name="icon_height">32dp</dimen>
+    <dimen name="logo_top_margin">101dp</dimen>
+    <dimen name="logo_bottom_margin">10dp</dimen>
+    <dimen name="icon_margin">13dp</dimen>
+    <dimen name="login_details_container_width">321dp</dimen>
+    <dimen name="position_of_container_from_logo">100dp</dimen>
+    <dimen name="button_height" >57dp</dimen>
+    <dimen name="edittext_height" >55dp</dimen>
+    <dimen name="separator_height" >1dp</dimen>
+    <dimen name="icon_size">23dp</dimen>
+    <dimen name="margin_register">50dp</dimen>
+    <dimen name="height_user_details">55dp</dimen>
+    <dimen name="padding_register">60dp</dimen>
+    <dimen name="image_next">23dp</dimen>
+    <dimen name="textsize_head">17sp</dimen>
+    <dimen name="height_item_head">45dp</dimen>
+    <dimen name="textsize_item">17sp</dimen>
+    <dimen name="width_weight">0dp</dimen>
+    <dimen name="radio_button_separation">50dp</dimen>
+    <dimen name="item_padding">7dp</dimen>
+    <dimen name="separator_width">1dp</dimen>
+    <dimen name="srei_login_button_margin_end">40dp</dimen>
+    <dimen name="padding_horizontal_end">21dp</dimen>
+    <dimen name="padding_horizontal_start">21dp</dimen>
+    <dimen name="nav_image_size">32dp</dimen>
+    <dimen name="nav_text_width">100dp</dimen>
+    <dimen name="nav_srei_logo_width">180dp</dimen>
+    <dimen name="nav_srei_logo_height">90dp</dimen>
+    <dimen name="nav_margin_bottom">16dp</dimen>
+</resources>

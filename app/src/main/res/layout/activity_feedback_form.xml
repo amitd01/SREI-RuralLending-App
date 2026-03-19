@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/action_bar_container"
+        layout="@layout/appbar" />
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/checklist_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:orientation="vertical"
+            tools:ignore="RtlSymmetry">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="77dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/layout_like"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/thumb_up"
+                        android:layout_width="42dp"
+
+                        android:layout_height="42dp"
+                        android:background="@color/white"
+                        android:src="@drawable/thumbs_up_icon" />
+                </LinearLayout>
+
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/separator" />
+
+
+                <LinearLayout
+                    android:id="@+id/layout_unlike"
+
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="42dp"
+android:id="@+id/thumb_down"
+                        android:layout_height="42dp"
+                        android:background="@color/white"
+                        android:src="@drawable/thumbs_down_icon" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/separator" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="62dp"
+                android:background="@color/white"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/current_active_menu_indicator" />
+
+                <jaanpehchan.rural.srei.CustomFontTextView
+                    android:id="@+id/feedback_mark_1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:gravity="left|center_vertical"
+                    android:text="Feedback Mark 1"
+                    android:textColor="@color/feedbackform_textcolor"
+                    android:textSize="19sp"
+                    app:fontName="Avenir_Book_01" />
+
+                <ImageView
+                    android:id="@+id/item1"
+
+                    android:layout_width="43dp"
+                    android:layout_height="43dp"
+                    android:background="@color/white"
+                    android:contentDescription="TODO"
+                    android:paddingEnd="13dp"
+                    android:paddingRight="13dp"
+                    android:src="@drawable/checkbox_empty_icon" />
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/separator" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+
+                android:layout_height="62dp"
+                android:background="@color/white"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/current_active_menu_indicator" />
+
+                <jaanpehchan.rural.srei.CustomFontTextView
+                    android:id="@+id/feedback_mark_2"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+
+                    android:gravity="left|center_vertical"
+                    android:text="Feedback Mark 1"
+                    android:textColor="@color/feedbackform_textcolor"
+                    android:textSize="19sp"
+                    app:fontName="Avenir_Book_01" />
+
+                <ImageView
+                    android:id="@+id/item2"
+
+                    android:layout_width="43dp"
+                    android:layout_height="43dp"
+                    android:background="@color/white"
+                    android:contentDescription="TODO"
+                    android:paddingEnd="13dp"
+                    android:paddingRight="13dp"
+                    android:src="@drawable/checkbox_empty_icon" />
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/separator" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+
+                android:layout_height="62dp"
+                android:background="@color/white"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/current_active_menu_indicator" />
+
+                <jaanpehchan.rural.srei.CustomFontTextView
+                    android:id="@+id/feedback_mark_3"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:gravity="left|center_vertical"
+                    android:text="Feedback Mark 1"
+
+                    android:textColor="@color/feedbackform_textcolor"
+                    android:textSize="19sp"
+                    app:fontName="Avenir_Book_01" />
+
+                <ImageView
+                    android:id="@+id/item3"
+
+                    android:layout_width="43dp"
+                    android:layout_height="43dp"
+                    android:background="@color/white"
+                    android:contentDescription="TODO"
+                    android:paddingEnd="13dp"
+                    android:paddingRight="13dp"
+                    android:src="@drawable/checkbox_empty_icon" />
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/separator" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="62dp"
+                android:background="@color/white"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/current_active_menu_indicator" />
+
+
+                <jaanpehchan.rural.srei.CustomFontTextView
+                    android:id="@+id/feedback_mark_4"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:gravity="left|center_vertical"
+                    android:text="Feedback Mark 1"
+                    android:textColor="@color/feedbackform_textcolor"
+                    android:textSize="19sp"
+
+                    app:fontName="Avenir_Book_01" />
+
+                <ImageView
+                    android:id="@+id/item4"
+                    android:layout_width="43dp"
+                    android:layout_height="43dp"
+                    android:background="@color/white"
+                    android:contentDescription="TODO"
+                    android:paddingEnd="13dp"
+                    android:paddingRight="13dp"
+                    android:src="@drawable/checkbox_empty_icon" />
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/separator" />
+
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/submit_feedback_button"
+            android:layout_width="67dp"
+            android:layout_height="67dp"
+            android:layout_marginBottom="34dp"
+            android:background="?attr/selectableItemBackground"
+            android:elevation="8dp"
+            android:src="@drawable/submit_button"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+        <Button
+            android:id="@+id/button_feedback_submit"
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+
+            android:background="@color/button_background_color"
+            android:paddingTop="10dp"
+            android:text="Submit FeedBack"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_button_size"
+            app:layout_constraintBottom_toBottomOf="@id/checklist_container"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+    </android.support.constraint.ConstraintLayout>
+</LinearLayout>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="43dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:gravity="left"
+    android:layoutDirection="ltr"
+    android:orientation="vertical">
+
+    <jaanpehchan.rural.srei.CustomFontTextView
+        android:id="@+id/lblListHeader"
+        app:fontName="Avenir_Book_01"
+        android:layout_width="match_parent"
+        android:layout_height="43dp"
+        android:gravity="center_vertical"
+        android:paddingEnd="21dp"
+        android:paddingLeft="21dp"
+        android:textAllCaps="true"
+        android:paddingRight="8dp"
+        android:paddingStart="21dp"
+        tools:text="ADDRESS PROOF"
+        android:textColor="@color/hint_text_color"
+        android:textSize="@dimen/textsize_item" />
+
+
+
+</LinearLayout>

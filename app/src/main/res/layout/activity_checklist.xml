@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/action_bar_container"
+        layout="@layout/appbar" />
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/checklist_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            tools:ignore="RtlSymmetry">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="62dp"
+                android:orientation="horizontal">
+
+                <jaanpehchan.rural.srei.CustomFontTextView
+                    android:id="@+id/text_lead_id_"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="left|center_vertical"
+                    android:paddingLeft="67dp"
+                    android:paddingStart="67dp"
+                    android:text="@string/lead_id"
+                    android:textAllCaps="true"
+                    android:textColor="@color/checklist_textcolor"
+                    android:textSize="20sp"
+                    app:fontName="Avenir_Book_01" />
+
+
+                <jaanpehchan.rural.srei.CustomFontTextView
+                    android:id="@+id/text_lead_id_val"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical|left"
+                    android:text="@string/_17322"
+                    android:textColor="@color/checklist_textcolor"
+                    android:textSize="20sp"
+                    app:fontName="Avenir_Book_01" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/separator" />
+
+            <LinearLayout
+                android:id="@+id/applicant"
+                android:layout_width="match_parent"
+                android:layout_height="62dp"
+                android:gravity="center"
+                android:paddingRight="11dp"
+                android:paddingEnd="11dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:layout_marginLeft="21dp"
+                    android:src="@drawable/current_active_menu_indicator" />
+
+                <jaanpehchan.rural.srei.CustomFontTextView
+                    android:id="@+id/text_applicant"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="left|center_vertical"
+                    android:paddingLeft="20dp"
+                    android:paddingStart="20dp"
+                    android:text="Applicant"
+                    android:textColor="@color/checklist_textcolor"
+                    android:textSize="20sp"
+                    app:fontName="Avenir_Book_01" />
+
+                <ImageView
+                    android:id="@+id/applicant_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:contentDescription="TODO"
+                    android:src="@drawable/modify_edit_button" />
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/separator" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:id="@+id/co_applicant"
+                android:layout_height="62dp"
+                android:paddingEnd="11dp"
+                android:paddingRight="11dp"
+                android:orientation="horizontal">
+
+
+                <jaanpehchan.rural.srei.CustomFontTextView
+                    android:id="@+id/text_co_applicant"
+                    android:layout_width="0dp"
+
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="left|center_vertical"
+                    android:paddingLeft="67dp"
+                    android:paddingStart="67dp"
+                    android:text="@string/co_applicant"
+                    android:textColor="@color/checklist_textcolor"
+                    android:textSize="20sp"
+                    app:fontName="Avenir_Book_01" />
+
+                <ImageView
+                    android:id="@+id/co_applicant_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:contentDescription="TODO"
+                    android:src="@drawable/modify_edit_button" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/separator" />
+
+
+            <LinearLayout
+                android:paddingEnd="11dp"
+                android:id="@+id/guarantor"
+                android:paddingRight="11dp"
+                android:layout_width="match_parent"
+                android:layout_height="62dp"
+                android:orientation="horizontal">
+
+                <jaanpehchan.rural.srei.CustomFontTextView
+                    android:id="@+id/text_guarantor"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="left|center_vertical"
+                    android:paddingLeft="67dp"
+                    android:paddingStart="67dp"
+                    android:text="Guarantor"
+                    android:textColor="@color/checklist_textcolor"
+                    android:textSize="20sp"
+                    app:fontName="Avenir_Book_01" />
+
+                <ImageView
+                    android:id="@+id/guarantor_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:contentDescription="TODO"
+                    android:src="@drawable/modify_edit_button" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/separator" />
+
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="62dp"
+                android:gravity="center"
+                android:id="@+id/asset"
+                android:orientation="horizontal"
+                android:paddingEnd="11dp"
+                android:paddingRight="11dp">
+
+
+                <jaanpehchan.rural.srei.CustomFontTextView
+                    android:id="@+id/text_asset"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="left|center_vertical"
+                    android:paddingLeft="67dp"
+                    android:paddingStart="67dp"
+                    android:text="Asset"
+                    android:textColor="@color/checklist_textcolor"
+                    android:textSize="20sp"
+                    app:fontName="Avenir_Book_01" />
+
+                <ImageView
+                    android:id="@+id/asset_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:contentDescription="TODO"
+                    android:src="@drawable/modify_edit_button" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/separator" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="62dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingEnd="11dp"
+                android:paddingRight="11dp"
+                android:id="@+id/transaction"
+                tools:ignore="RtlSymmetry">
+
+                <jaanpehchan.rural.srei.CustomFontTextView
+                    android:id="@+id/text_transaction"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="left|center_vertical"
+                    android:paddingLeft="67dp"
+                    android:paddingStart="67dp"
+                    android:text="Transaction"
+                    android:textColor="@color/checklist_textcolor"
+                    android:textSize="20sp"
+                    app:fontName="Avenir_Book_01" />
+                <ImageView
+                    android:id="@+id/transaction_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:contentDescription="TODO"
+                    android:src="@drawable/modify_edit_button" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/separator" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/button_application_submit"
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:background="@color/button_background_color"
+            android:paddingTop="10dp"
+            android:text="Submit Application"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_button_size"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <ImageView
+            android:id="@+id/submit"
+            android:layout_width="67dp"
+            android:layout_height="67dp"
+            android:layout_marginBottom="34dp"
+            android:background="?attr/selectableItemBackground"
+            android:elevation="8dp"
+            android:src="@drawable/submit_button"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </android.support.constraint.ConstraintLayout>
+</LinearLayout>
+
+<!--
+<ImageView
+                    android:layout_width="79dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/saved" />
+           -->

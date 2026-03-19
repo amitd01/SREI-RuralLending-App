@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="head">#1D1D26</color>
+    <color name="big_rectangle_color">#66ffffff</color>
+    <color name="small_rectangle_color">#99ffffff</color>
+    <color name="white">#ffffff</color>
+    <color name="hint_text_color">#7f000000</color>
+    <color name="button_background_color">#F44336</color>
+    <color name="head_text_color">#000000</color>
+    <color name="separator">#0d1d1d26</color>
+    <color name="lead_details_text">#7f1d1d26</color>
+    <color name="edit_text_lead_details">#1D1D26</color>
+    <color name="checklist_textcolor">#000000</color>
+    <color name="feedbackform_textcolor">#000000</color>
+    <color name="nav_text_color">#FFFFFF</color>
+    <color name="item_value">#000000</color>
+    <color name="item">#7f000000</color>
+    <color name="itemColor">#FFF1F1</color>
+    <color name="unselected">#000000</color>
+</resources>
