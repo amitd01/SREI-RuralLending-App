@@ -36,13 +36,11 @@ public class NavMenuActivity extends AppCompatActivity implements View.OnClickLi
 
     @Override
     public void onClick(View v) {
-        switch (v.getId()){
-            case R.id.jp_queue: startActivity(new Intent(NavMenuActivity.this,JpQueue.class));
-                break;
-            case R.id.lead_details:startActivity(new Intent(NavMenuActivity.this,LeadDetailsActivity.class));
-                break;
-            case R.id.installmentCalculator:startActivity(new Intent(NavMenuActivity.this,InstallmentCalculatorActivity.class));
-
+        // switch(R.id.*) replaced with if/else — R.id values are non-final in AndroidX
+        int vid = v.getId();
+        if (vid == R.id.jp_queue) { startActivity(new Intent(NavMenuActivity.this,JpQueue.class));
+        } else if (vid == R.id.lead_details) { startActivity(new Intent(NavMenuActivity.this,LeadDetailsActivity.class));
+        } else if (vid == R.id.installmentCalculator) { startActivity(new Intent(NavMenuActivity.this,InstallmentCalculatorActivity.class));
         }
     }
 

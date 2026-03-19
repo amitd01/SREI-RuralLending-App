@@ -424,44 +424,37 @@ public class ApplicantDetailsActivity extends AppCompatActivity implements View.
 
     @Override
     public void onClick(View v) {
+        // switch(R.id.*) replaced with if/else — R.id values are non-final in AndroidX
         int id = v.getId();
-        switch (id) {
-            case R.id.button_applicant_submit_detail:
-                //allFilled();
-                finish();
-                break;
-            case R.id.text_family_members_val:
-                NumberPickerDialog familyDialog = new NumberPickerDialog();
-                familyDialog.setValueChangeListener(new NumberPicker.OnValueChangeListener() {
-                    @Override
-                    public void onValueChange(NumberPicker picker, int oldVal, int newVal) {
-                        textNoOfMembersVal.setText(String.valueOf(newVal));
-                    }
-                });
-                familyDialog.show(getSupportFragmentManager(), "family Picker");
-                break;
-            case R.id.text_no_of_dependt_val:
-                NumberPickerDialog dependentsDialog = new NumberPickerDialog();
-                dependentsDialog.setValueChangeListener(new NumberPicker.OnValueChangeListener() {
-                    @Override
-                    public void onValueChange(NumberPicker picker, int oldVal, int newVal) {
-                        textNoOfDependentsVal.setText(String.valueOf(newVal));
-
-                    }
-                });
-                dependentsDialog.show(getSupportFragmentManager(), "dependents Picker");
-                break;
-            case R.id.text_earning_members_val:
-                NumberPickerDialog earningMembers = new NumberPickerDialog();
-                earningMembers.setValueChangeListener(new NumberPicker.OnValueChangeListener() {
-                    @Override
-                    public void onValueChange(NumberPicker picker, int oldVal, int newVal) {
-                        textEarningMembersVal.setText(String.valueOf(newVal));
-
-                    }
-                });
-                earningMembers.show(getSupportFragmentManager(), "earning Members Picker");
-                break;
+        if (id == R.id.button_applicant_submit_detail) {
+            finish();
+        } else if (id == R.id.text_family_members_val) {
+            NumberPickerDialog familyDialog = new NumberPickerDialog();
+            familyDialog.setValueChangeListener(new NumberPicker.OnValueChangeListener() {
+                @Override
+                public void onValueChange(NumberPicker picker, int oldVal, int newVal) {
+                    textNoOfMembersVal.setText(String.valueOf(newVal));
+                }
+            });
+            familyDialog.show(getSupportFragmentManager(), "family Picker");
+        } else if (id == R.id.text_no_of_dependt_val) {
+            NumberPickerDialog dependentsDialog = new NumberPickerDialog();
+            dependentsDialog.setValueChangeListener(new NumberPicker.OnValueChangeListener() {
+                @Override
+                public void onValueChange(NumberPicker picker, int oldVal, int newVal) {
+                    textNoOfDependentsVal.setText(String.valueOf(newVal));
+                }
+            });
+            dependentsDialog.show(getSupportFragmentManager(), "dependents Picker");
+        } else if (id == R.id.text_earning_members_val) {
+            NumberPickerDialog earningMembers = new NumberPickerDialog();
+            earningMembers.setValueChangeListener(new NumberPicker.OnValueChangeListener() {
+                @Override
+                public void onValueChange(NumberPicker picker, int oldVal, int newVal) {
+                    textEarningMembersVal.setText(String.valueOf(newVal));
+                }
+            });
+            earningMembers.show(getSupportFragmentManager(), "earning Members Picker");
         }
     }
 

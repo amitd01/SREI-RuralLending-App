@@ -64,40 +64,34 @@ public class LeadDetailsActivity extends AppCompatActivity implements View.OnCli
 
     @Override
     public void onClick(View v) {
-        switch (v.getId()) {
-            case R.id.customer_name_icon:
-                editTextName.requestFocus();
-                break;
-            case R.id.mobile_no_icon:
-                editTextMobileNo.requestFocus();
-                break;
-            case R.id.aadhar_icon:
-
-                editTextAadhar.requestFocus();
-                break;
-            case R.id.edittext_date_of_birth:
-                InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
-                if (imm != null) {
-                    imm.hideSoftInputFromWindow(getWindow().getDecorView()
-                            .getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);
-                }
-                break;
-            case R.id.calender_icon:
-                editTextDOB.setEnabled(true);
-                Calendar c = Calendar.getInstance();
-                int mYear = c.get(Calendar.YEAR);
-                int mMonth = c.get(Calendar.MONTH);
-                int mDay = c.get(Calendar.DAY_OF_MONTH);
-                System.out.println("the selected " + mDay);
-                DatePickerDialog dialog = new DatePickerDialog(LeadDetailsActivity.this,
-                        new mDateSetListener(), mYear, mMonth, mDay);
-                dialog.show();
-                break;
-            case R.id.button_send_for_verfication:
-                if (validateFields()) {
-                    finish();
-                }
-                break;
+        // switch(R.id.*) replaced with if/else — R.id values are non-final in AndroidX
+        int vid = v.getId();
+        if (vid == R.id.customer_name_icon) {
+            editTextName.requestFocus();
+        } else if (vid == R.id.mobile_no_icon) {
+            editTextMobileNo.requestFocus();
+        } else if (vid == R.id.aadhar_icon) {
+            editTextAadhar.requestFocus();
+        } else if (vid == R.id.edittext_date_of_birth) {
+            InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+            if (imm != null) {
+                imm.hideSoftInputFromWindow(getWindow().getDecorView()
+                        .getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);
+            }
+        } else if (vid == R.id.calender_icon) {
+            editTextDOB.setEnabled(true);
+            Calendar c = Calendar.getInstance();
+            int mYear = c.get(Calendar.YEAR);
+            int mMonth = c.get(Calendar.MONTH);
+            int mDay = c.get(Calendar.DAY_OF_MONTH);
+            System.out.println("the selected " + mDay);
+            DatePickerDialog dialog = new DatePickerDialog(LeadDetailsActivity.this,
+                    new mDateSetListener(), mYear, mMonth, mDay);
+            dialog.show();
+        } else if (vid == R.id.button_send_for_verfication) {
+            if (validateFields()) {
+                finish();
+            }
         }
     }
 

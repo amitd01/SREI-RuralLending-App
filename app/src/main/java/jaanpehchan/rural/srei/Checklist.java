@@ -88,33 +88,20 @@ public class Checklist extends AppCompatActivity implements View.OnClickListener
 
     @Override
     public void onClick(View v) {
-        switch (v.getId()) {
-            case R.id.button_application_submit:
-                startActivity(new Intent(Checklist.this,
-                        FeedbackFormActivity.class));
-                break;
-            case R.id.transaction:
-                startActivity(new Intent(Checklist.this,
-                        TransactionDetails.class));
-                break;
-            case R.id.applicant:
-                startActivity(new Intent(Checklist.this,
-                        ApplicantDetailsActivity.class));
-                break;
-            case R.id.co_applicant:
-                startActivity(new Intent(Checklist.this,
-                        CoApplicantActivityDetails.class));
-                break;
-            case R.id.guarantor:
-                startActivity(new Intent(Checklist.this,
-                        GuarantorDetailsActivity.class));
-                break;
-            case R.id.asset:
-                startActivity(new Intent(Checklist.this,
-                        AssetAndDealerDetail.class));
-                break;
-
-
+        // switch(R.id.*) replaced with if/else — R.id values are non-final in AndroidX
+        int vid = v.getId();
+        if (vid == R.id.button_application_submit) {
+            startActivity(new Intent(Checklist.this, FeedbackFormActivity.class));
+        } else if (vid == R.id.transaction) {
+            startActivity(new Intent(Checklist.this, TransactionDetails.class));
+        } else if (vid == R.id.applicant) {
+            startActivity(new Intent(Checklist.this, ApplicantDetailsActivity.class));
+        } else if (vid == R.id.co_applicant) {
+            startActivity(new Intent(Checklist.this, CoApplicantActivityDetails.class));
+        } else if (vid == R.id.guarantor) {
+            startActivity(new Intent(Checklist.this, GuarantorDetailsActivity.class));
+        } else if (vid == R.id.asset) {
+            startActivity(new Intent(Checklist.this, AssetAndDealerDetail.class));
         }
     }
 

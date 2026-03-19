@@ -66,37 +66,25 @@ public class FeedbackFormActivity extends AppCompatActivity implements View.OnCl
 
     @Override
     public void onClick(View v) {
-        switch (v.getId()) {
-            case R.id.button_feedback_submit:
-              /*  if (imageItem1.getTag().equals(R.drawable.checkbox_checked_icon) &&
-                        imageItem2.getTag().equals(R.drawable.checkbox_checked_icon) &&
-                        imageItem3.getTag().equals(R.drawable.checkbox_checked_icon) &&
-                        imageItem4.getTag().equals(R.drawable.checkbox_checked_icon) && flag == 1)*/
-                    finish();
-                break;
-            case R.id.item1:
-                checkFeedBack((ImageView) v);
-                break;
-            case R.id.item2:
-                checkFeedBack((ImageView) v);
-                break;
-            case R.id.item3:
-                checkFeedBack((ImageView) v);
-                break;
-            case R.id.item4:
-                checkFeedBack((ImageView) v);
-                break;
-            case R.id.layout_like:
-             //   flag = 1;
-                thumbDown.setColorFilter(ContextCompat.getColor(this, R.color.unselected), PorterDuff.Mode.SRC_ATOP);
-                thumbUp.setColorFilter(ContextCompat.getColor(this, R.color.button_background_color), PorterDuff.Mode.SRC_ATOP);
-                break;
-            case R.id.layout_unlike:
-              //  flag = 1;
-                thumbUp.setColorFilter(ContextCompat.getColor(this, R.color.unselected), PorterDuff.Mode.SRC_ATOP);
-                thumbDown.setColorFilter(ContextCompat.getColor(this, R.color.button_background_color), PorterDuff.Mode.SRC_ATOP);
-                layoutLike.setBackgroundColor(Color.TRANSPARENT);
-                break;
+        // switch(R.id.*) replaced with if/else — R.id values are non-final in AndroidX
+        int vid = v.getId();
+        if (vid == R.id.button_feedback_submit) {
+            finish();
+        } else if (vid == R.id.item1) {
+            checkFeedBack((ImageView) v);
+        } else if (vid == R.id.item2) {
+            checkFeedBack((ImageView) v);
+        } else if (vid == R.id.item3) {
+            checkFeedBack((ImageView) v);
+        } else if (vid == R.id.item4) {
+            checkFeedBack((ImageView) v);
+        } else if (vid == R.id.layout_like) {
+            thumbDown.setColorFilter(ContextCompat.getColor(this, R.color.unselected), PorterDuff.Mode.SRC_ATOP);
+            thumbUp.setColorFilter(ContextCompat.getColor(this, R.color.button_background_color), PorterDuff.Mode.SRC_ATOP);
+        } else if (vid == R.id.layout_unlike) {
+            thumbUp.setColorFilter(ContextCompat.getColor(this, R.color.unselected), PorterDuff.Mode.SRC_ATOP);
+            thumbDown.setColorFilter(ContextCompat.getColor(this, R.color.button_background_color), PorterDuff.Mode.SRC_ATOP);
+            layoutLike.setBackgroundColor(Color.TRANSPARENT);
         }
     }
 
