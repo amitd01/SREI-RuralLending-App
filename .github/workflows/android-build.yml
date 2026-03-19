@@ -36,20 +36,18 @@ jobs:
           distribution: 'temurin'
           cache: gradle
 
-      # ── Android SDK: ensure compileSdk 34 + build-tools are present ─────────
-      # The ubuntu-latest runner ships some SDK components but API 34
-      # may not be pre-installed; sdkmanager is on PATH from the runner image.
-      - name: Install Android SDK components
-        run: |
-          echo "y" | $ANDROID_SDK_ROOT/cmdline-tools/latest/bin/sdkmanager \
-            "platforms;android-34" \
-            "build-tools;34.0.0" \
-            "platform-tools" 2>/dev/null || \
-          echo "y" | sdkmanager \
-            "platforms;android-34" \
-            "build-tools;34.0.0" \
-            "platform-tools" 2>/dev/null || \
-          echo "sdkmanager not found — relying on Gradle auto-download"
+      # ── Android SDK: install platforms;android-34 + build-tools ─────────────
+      # android-actions/setup-android is the canonical way to pre-install
+      # SDK components; it avoids the auto-install failure that happens when
+      # Gradle tries to install Platform 34 via sdkmanager mid-build.
+      - name: Set up Android SDK
+        uses: android-actions/setup-android@v3
+        with:
+          packages: >-
+            platforms;android-34
+            build-tools;34.0.0
+            platform-tools
+          accept-android-sdk-licenses: true
 
       # ── Make gradlew executable ─────────────────────────────────────────────
       - name: Grant execute permission for gradlew
