@@ -36,18 +36,44 @@ jobs:
           distribution: 'temurin'
           cache: gradle
 
+      # ── Android SDK: ensure compileSdk 34 + build-tools are present ─────────
+      # The ubuntu-latest runner ships some SDK components but API 34
+      # may not be pre-installed; sdkmanager is on PATH from the runner image.
+      - name: Install Android SDK components
+        run: |
+          echo "y" | $ANDROID_SDK_ROOT/cmdline-tools/latest/bin/sdkmanager \
+            "platforms;android-34" \
+            "build-tools;34.0.0" \
+            "platform-tools" 2>/dev/null || \
+          echo "y" | sdkmanager \
+            "platforms;android-34" \
+            "build-tools;34.0.0" \
+            "platform-tools" 2>/dev/null || \
+          echo "sdkmanager not found — relying on Gradle auto-download"
+
       # ── Make gradlew executable ─────────────────────────────────────────────
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew
 
-      # ── Build ───────────────────────────────────────────────────────────────
+      # ── Build — output captured so errors survive log truncation ─────────────
       - name: Build debug APK
-        run: ./gradlew assembleDebug --stacktrace
+        run: |
+          ./gradlew assembleDebug --stacktrace 2>&1 | tee /tmp/build.log
+          exit ${PIPESTATUS[0]}
         env:
-          # Suppress "daemon not running" noise in CI
           GRADLE_OPTS: "-Dorg.gradle.daemon=false"
 
-      # ── Upload artifact (available on every run) ────────────────────────────
+      # ── On failure: print a focused error summary (never truncated) ──────────
+      - name: Print build errors
+        if: failure()
+        run: |
+          echo "════ ERRORS / FAILURES ════"
+          grep -E "(error:|Error |FAILED|Exception|Could not resolve|Could not find|Caused by)" \
+            /tmp/build.log | head -60 || echo "(no grep matches — showing tail)"
+          echo "════ LAST 80 LINES ════"
+          tail -80 /tmp/build.log
+
+      # ── Upload artifact (available on every successful run) ─────────────────
       - name: Upload debug APK
         uses: actions/upload-artifact@v4
         with:
