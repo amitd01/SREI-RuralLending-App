@@ -1,0 +1,102 @@
+# =============================================================================
+# android-build.yml
+# Builds a debug APK on every push to main.
+# Creates a GitHub Release with the APK on semver tag pushes (e.g. v1.0.0).
+#
+# Notes:
+#   - Uses JDK 11: AGP 3.1.x is incompatible with JDK 17 (removed APIs).
+#   - Support Library (27.x) is served by Google Maven, not JCenter.
+#   - SweetAlert is served by JitPack — no extra config needed.
+# =============================================================================
+
+name: Android Build
+
+on:
+  push:
+    branches: [ main ]
+    tags:     [ 'v*.*' ]       # e.g. v1.0, v1.2.3
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    name: Build debug APK
+    runs-on: ubuntu-latest
+
+    steps:
+      # ── Checkout ────────────────────────────────────────────────────────────
+      - name: Checkout source
+        uses: actions/checkout@v4
+
+      # ── Java 11 (required for AGP 3.1.x) ───────────────────────────────────
+      - name: Set up JDK 11
+        uses: actions/setup-java@v4
+        with:
+          java-version: '11'
+          distribution: 'temurin'
+          cache: gradle
+
+      # ── Make gradlew executable ─────────────────────────────────────────────
+      - name: Grant execute permission for gradlew
+        run: chmod +x gradlew
+
+      # ── Build ───────────────────────────────────────────────────────────────
+      - name: Build debug APK
+        run: ./gradlew assembleDebug --stacktrace
+        env:
+          # Suppress "daemon not running" noise in CI
+          GRADLE_OPTS: "-Dorg.gradle.daemon=false"
+
+      # ── Upload artifact (available on every run) ────────────────────────────
+      - name: Upload debug APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: app-debug
+          path: app/build/outputs/apk/debug/app-debug.apk
+          retention-days: 14    # keep for 2 weeks
+
+  # ── Release job — only runs on tag pushes ──────────────────────────────────
+  release:
+    name: Create GitHub Release
+    needs: build
+    if: startsWith(github.ref, 'refs/tags/v')
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write           # needed to create releases
+
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v4
+
+      - name: Set up JDK 11
+        uses: actions/setup-java@v4
+        with:
+          java-version: '11'
+          distribution: 'temurin'
+          cache: gradle
+
+      - name: Grant execute permission for gradlew
+        run: chmod +x gradlew
+
+      - name: Build debug APK for release
+        run: ./gradlew assembleDebug --stacktrace
+        env:
+          GRADLE_OPTS: "-Dorg.gradle.daemon=false"
+
+      - name: Create GitHub Release with APK
+        uses: softprops/action-gh-release@v2
+        with:
+          files: app/build/outputs/apk/debug/app-debug.apk
+          name: "Release ${{ github.ref_name }}"
+          body: |
+            ## SREI Rural Lending App — ${{ github.ref_name }}
+
+            ### Install
+            Download `app-debug.apk` below and sideload onto your Android device
+            (Settings → Install unknown apps must be enabled).
+
+            ### Build info
+            - Branch: `main`
+            - Tag: `${{ github.ref_name }}`
+            - Built by: GitHub Actions
