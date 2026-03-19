@@ -9,3 +9,5 @@
 /captures
 .externalNativeBuild
 tmp_pdf_imgs/
+*.jks
+*.keystore

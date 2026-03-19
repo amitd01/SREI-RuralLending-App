@@ -11,8 +11,21 @@ android {
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
+    signingConfigs {
+        release {
+            def keystorePath = System.getenv('KEYSTORE_PATH') ?: '../srei-release.jks'
+            def ksFile = file(keystorePath)
+            if (ksFile.exists()) {
+                storeFile ksFile
+                storePassword System.getenv('KEYSTORE_PASSWORD') ?: ''
+                keyAlias System.getenv('KEY_ALIAS') ?: 'srei'
+                keyPassword System.getenv('KEY_PASSWORD') ?: ''
+            }
+        }
+    }
     buildTypes {
         release {
+            signingConfig signingConfigs.release
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
