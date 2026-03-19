@@ -1,4 +1,4 @@
-package Helpers;
+package jaanpehchan.rural.srei;
 
 import android.content.Context;
 import android.view.View;

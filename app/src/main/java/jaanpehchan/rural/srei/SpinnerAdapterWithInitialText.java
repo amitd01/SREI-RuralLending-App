@@ -2,7 +2,8 @@ package jaanpehchan.rural.srei;
 
 import android.content.Context;
 import android.graphics.Typeface;
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
+import androidx.core.content.ContextCompat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -67,7 +68,7 @@ public class SpinnerAdapterWithInitialText<T> extends ArrayAdapter<T> {
             LayoutInflater inflater = LayoutInflater.from(context);
                 View view = inflater.inflate(resource, container, false);
             ((TextView) view).setText(initialText);
-            ((TextView) view).setTextColor(context.getResources().getColor(R.color.item));
+            ((TextView) view).setTextColor(ContextCompat.getColor(context, R.color.item));
             ((TextView) view).setTypeface(Typeface.createFromAsset(context.getAssets(), "fonts/Avenir-Book-01.ttf"));
             return view;
         }

@@ -3,7 +3,7 @@ package jaanpehchan.rural.srei;
 import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.view.View;
@@ -13,7 +13,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ScrollView;
 
-import Helpers.Animations;
+import jaanpehchan.rural.srei.Animations;
 
 public class MainActivity extends AppCompatActivity  {
 

@@ -3,7 +3,7 @@ package jaanpehchan.rural.srei;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 
 public class OtpSuccessfulActivity extends AppCompatActivity {
     private static final int TIME_TO_START_ACTIVITY = 1000;

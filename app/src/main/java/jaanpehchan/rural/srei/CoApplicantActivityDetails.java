@@ -3,8 +3,8 @@ package jaanpehchan.rural.srei;
 import android.app.ActionBar;
 import android.graphics.Typeface;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import android.view.View;
 import android.view.ViewTreeObserver;
 import android.widget.Button;
@@ -22,7 +22,7 @@ import java.util.HashMap;
 import java.util.List;
 
 import static jaanpehchan.rural.srei.ApplicantDetailsActivity.MARGIN_BOTTOM;
-import static jaanpehchan.rural.srei.ApplicantDetailsActivity.dpToPx;
+import static jaanpehchan.rural.srei.ViewUtils.dpToPx;
 
 public class CoApplicantActivityDetails extends AppCompatActivity implements View.OnClickListener {
     private static final String ACTIVITY_TITLE = "CO-APPLICANT DETAILS";

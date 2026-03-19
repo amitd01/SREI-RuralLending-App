@@ -4,9 +4,10 @@ import android.graphics.Color;
 import android.graphics.PorterDuff;
 import android.graphics.Typeface;
 import android.os.Bundle;
-import android.support.v7.app.ActionBar;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.core.content.ContextCompat;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
@@ -87,13 +88,13 @@ public class FeedbackFormActivity extends AppCompatActivity implements View.OnCl
                 break;
             case R.id.layout_like:
              //   flag = 1;
-                thumbDown.setColorFilter(getResources().getColor(R.color.unselected), PorterDuff.Mode.SRC_ATOP);
-                thumbUp.setColorFilter(getResources().getColor(R.color.button_background_color), PorterDuff.Mode.SRC_ATOP);
+                thumbDown.setColorFilter(ContextCompat.getColor(this, R.color.unselected), PorterDuff.Mode.SRC_ATOP);
+                thumbUp.setColorFilter(ContextCompat.getColor(this, R.color.button_background_color), PorterDuff.Mode.SRC_ATOP);
                 break;
             case R.id.layout_unlike:
               //  flag = 1;
-                thumbUp.setColorFilter(getResources().getColor(R.color.unselected), PorterDuff.Mode.SRC_ATOP);
-                thumbDown.setColorFilter(getResources().getColor(R.color.button_background_color), PorterDuff.Mode.SRC_ATOP);
+                thumbUp.setColorFilter(ContextCompat.getColor(this, R.color.unselected), PorterDuff.Mode.SRC_ATOP);
+                thumbDown.setColorFilter(ContextCompat.getColor(this, R.color.button_background_color), PorterDuff.Mode.SRC_ATOP);
                 layoutLike.setBackgroundColor(Color.TRANSPARENT);
                 break;
         }

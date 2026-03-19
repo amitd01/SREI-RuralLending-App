@@ -4,8 +4,8 @@ import android.app.DatePickerDialog;
 import android.content.Context;
 import android.graphics.Typeface;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
@@ -81,6 +81,7 @@ public class LeadDetailsActivity extends AppCompatActivity implements View.OnCli
                     imm.hideSoftInputFromWindow(getWindow().getDecorView()
                             .getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);
                 }
+                break;
             case R.id.calender_icon:
                 editTextDOB.setEnabled(true);
                 Calendar c = Calendar.getInstance();
@@ -93,9 +94,31 @@ public class LeadDetailsActivity extends AppCompatActivity implements View.OnCli
                 dialog.show();
                 break;
             case R.id.button_send_for_verfication:
-                finish();
+                if (validateFields()) {
+                    finish();
+                }
                 break;
         }
+    }
+
+    private boolean validateFields() {
+        boolean valid = true;
+        String name = editTextName.getText().toString().trim();
+        if (name.isEmpty()) {
+            editTextName.setError("Name is required");
+            valid = false;
+        }
+        String aadhaar = editTextAadhar.getText().toString().trim();
+        if (!aadhaar.matches("\\d{12}")) {
+            editTextAadhar.setError("Aadhaar must be exactly 12 digits");
+            valid = false;
+        }
+        String mobile = editTextMobileNo.getText().toString().trim();
+        if (!mobile.matches("\\d{10}")) {
+            editTextMobileNo.setError("Mobile number must be exactly 10 digits");
+            valid = false;
+        }
+        return valid;
     }
 
     class mDateSetListener implements DatePickerDialog.OnDateSetListener {
@@ -104,7 +127,7 @@ public class LeadDetailsActivity extends AppCompatActivity implements View.OnCli
         public void onDateSet(DatePicker view, int year, int monthOfYear,
                               int dayOfMonth) {
             String Month[] = {"January", "February", "March", "April",
-                    "May", "June", "july", "August", "September", "October", "Novermber", "December"};
+                    "May", "June", "July", "August", "September", "October", "November", "December"};
             int mYear = year;
             int mMonth = monthOfYear;
             int mDay = dayOfMonth;
