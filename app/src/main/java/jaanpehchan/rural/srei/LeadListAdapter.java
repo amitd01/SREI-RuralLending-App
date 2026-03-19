@@ -1,7 +1,8 @@
 package jaanpehchan.rural.srei;
 
 import android.content.Context;
-import android.support.v7.widget.RecyclerView;
+import androidx.core.content.ContextCompat;
+import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -45,15 +46,15 @@ class LeadListAdapter extends RecyclerView.Adapter<LeadListAdapter.RecipeViewHol
 
         String status = lead.get(position).getStatus();
         if (status.equals("REJECTED")) {
-            holder.idImage.setImageDrawable(mContext.getResources()
-                    .getDrawable(R.drawable.current_active_menu_indicator));
-            holder.rejectedStatusImage.setImageDrawable(mContext.getResources()
-                    .getDrawable(R.drawable.jp_queue_status_rejected));
+            holder.idImage.setImageDrawable(ContextCompat.getDrawable(mContext,
+                    R.drawable.current_active_menu_indicator));
+            holder.rejectedStatusImage.setImageDrawable(ContextCompat.getDrawable(mContext,
+                    R.drawable.jp_queue_status_rejected));
         } else {
-            holder.idImage.setImageDrawable(mContext.getResources()
-                    .getDrawable(R.drawable.current_active_menu_indicator));
-            holder.rejectedStatusImage.setImageDrawable(mContext.getResources()
-                    .getDrawable(R.drawable.jp_queue_status_accepted));
+            holder.idImage.setImageDrawable(ContextCompat.getDrawable(mContext,
+                    R.drawable.current_active_menu_indicator));
+            holder.rejectedStatusImage.setImageDrawable(ContextCompat.getDrawable(mContext,
+                    R.drawable.jp_queue_status_accepted));
         }
     }
 

@@ -10,7 +10,7 @@
         android:id="@+id/action_bar_container"
         layout="@layout/appbar" />
 
-    <android.support.constraint.ConstraintLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -288,5 +288,5 @@ android:id="@+id/thumb_down"
             app:layout_constraintBottom_toBottomOf="@id/checklist_container"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent" />
-    </android.support.constraint.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </LinearLayout>

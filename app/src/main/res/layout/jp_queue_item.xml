@@ -44,7 +44,7 @@
         android:layout_height="38dp"
         android:background="@color/separator" />
 
-    <android.support.constraint.ConstraintLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="1">
@@ -73,7 +73,7 @@
             android:textColor="@color/white"
             android:textSize="15sp"
             app:fontName="Avenir_Book_01" />
-    </android.support.constraint.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <View
         android:layout_width="1dp"

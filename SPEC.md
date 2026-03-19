@@ -159,11 +159,17 @@ No SQLite, Room, or remote database.
 
 1. **No actual calculations** — Installment calculator is purely cosmetic
 2. **No data persistence** — Form data is lost when activities close
-3. **No input validation** — Most fields accept any input without validation
-4. **No backend integration** — No API calls, no data sync
-5. **No offline storage** — No local database for form drafts
-6. **No image/document capture** — No camera or file upload for KYC documents
-7. **No geolocation** — No GPS tracking of field visits
-8. **Missing switch-case break** — `LeadDetailsActivity.onClick()` line 84 falls through from `edittext_date_of_birth` to `calender_icon`
-9. **Month name typos** — "july" (lowercase), "Novermber" (misspelled) in date formatter
-10. **Deprecated AsyncTask** — Used in InstallmentCalculatorActivity
+3. **No backend integration** — No API calls, no data sync
+4. **No offline storage** — No local database for form drafts
+5. **No image/document capture** — No camera or file upload for KYC documents
+6. **No geolocation** — No GPS tracking of field visits
+
+## Resolved Issues (2026 Modernization)
+
+- ~~Missing switch-case break~~ — Fixed in LeadDetailsActivity
+- ~~Month name typos~~ — Fixed ("july" → "July", "Novermber" → "November")
+- ~~Deprecated AsyncTask~~ — Replaced with Handler.postDelayed() in InstallmentCalculatorActivity
+- ~~No input validation~~ — Added Aadhaar (12 digits), mobile (10 digits), name validation in LeadDetailsActivity
+- ~~Android Support Library~~ — Migrated to AndroidX
+- ~~Non-standard Helpers package~~ — Moved Animations.java to main package
+- ~~Deprecated getColor/getDrawable~~ — Replaced with ContextCompat equivalents

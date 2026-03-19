@@ -2,7 +2,7 @@
 
 ## Project Context
 
-Android prototype for rural lending field agents in India. Built 2018, Java-only, no backend. The app captures loan application details for tractor/equipment financing through multi-step forms.
+Android prototype for rural lending field agents in India. Built 2018, modernized 2026. Java-only, no backend. The app captures loan application details for tractor/equipment financing through multi-step forms.
 
 **Package:** `jaanpehchan.rural.srei`
 
@@ -24,6 +24,8 @@ Android prototype for rural lending field agents in India. Built 2018, Java-only
 | Main form (most complex) | `app/src/main/java/jaanpehchan/rural/srei/ApplicantDetailsActivity.java` |
 | Loan queue | `app/src/main/java/jaanpehchan/rural/srei/JpQueue.java` |
 | Mock data model | `app/src/main/java/jaanpehchan/rural/srei/FakeData.java` |
+| Shared UI utilities | `app/src/main/java/jaanpehchan/rural/srei/ViewUtils.java` |
+| Animation utilities | `app/src/main/java/jaanpehchan/rural/srei/Animations.java` |
 | Android manifest | `app/src/main/AndroidManifest.xml` |
 | Dependencies | `app/build.gradle` |
 | Layouts | `app/src/main/res/layout/` |
@@ -32,7 +34,7 @@ Android prototype for rural lending field agents in India. Built 2018, Java-only
 ## Code Conventions
 
 - **Language:** Java (no Kotlin)
-- **UI framework:** Android Support Library 27.1.1 (not AndroidX)
+- **UI framework:** AndroidX AppCompat 1.6.1 + Material 1.11.0
 - **Architecture:** Activity-based, no fragments, no MVVM/MVP
 - **Navigation:** Direct `Intent` launches between Activities
 - **Custom fonts:** Applied via `Typeface.createFromAsset()` with `fonts/Avenir-Book-01.ttf`
@@ -40,16 +42,13 @@ Android prototype for rural lending field agents in India. Built 2018, Java-only
 - **Dropdowns:** `ExpandableListView` with `ExpandableListAdapter` (not Spinner for most selections)
 - **Data:** All in-memory via `ArrayList<FakeData>`, no database
 - **Session:** `SharedPreferences` for login state and checklist progress
+- **Utilities:** `ViewUtils.dpToPx()` for density-independent pixel conversion
 
 ## Known Issues
 
 - `MainActivity.LOGIN` is hardcoded as `"abcdef"` — used as both the SharedPreferences file name and an implicit credential check
-- `InstallmentCalculatorActivity` fakes a 4-second calculation with `AsyncTask` + `Thread.sleep(4000)` — no real math
-- `LeadDetailsActivity.onClick()` has a missing `break` causing fall-through from date field to calendar icon case
-- Month names in `LeadDetailsActivity.mDateSetListener` contain typos ("july", "Novermber")
+- `InstallmentCalculatorActivity` fakes a 4-second calculation with `Handler.postDelayed()` — no real math
 - `ApplicantDetailsActivity` is ~470 lines with all UI setup in `onCreate` — heavy but functional
-- No input validation on Aadhaar (12 digits), PAN, mobile (10 digits), or email fields
-- `Helpers.Animations` is in a non-standard package path (`java/Helpers/` instead of under the main package)
 
 ## Domain Terms
 

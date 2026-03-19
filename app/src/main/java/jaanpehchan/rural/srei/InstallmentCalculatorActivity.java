@@ -1,11 +1,12 @@
 package jaanpehchan.rural.srei;
 
-import android.annotation.SuppressLint;
 import android.graphics.Typeface;
-import android.os.AsyncTask;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
+import android.os.Handler;
+import android.os.Looper;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.core.content.ContextCompat;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -48,7 +49,6 @@ public class InstallmentCalculatorActivity extends AppCompatActivity
     }
 
 
-    @SuppressLint("StaticFieldLeak")
     @Override
     public void onClick(View v) {
         textTotal.setVisibility(View.INVISIBLE);
@@ -56,33 +56,17 @@ public class InstallmentCalculatorActivity extends AppCompatActivity
         final SweetAlertDialog pDialog =
                 new SweetAlertDialog(this, SweetAlertDialog.PROGRESS_TYPE);
         pDialog.getProgressHelper()
-                .setBarColor(getResources().getColor(R.color.button_background_color));
+                .setBarColor(ContextCompat.getColor(this, R.color.button_background_color));
         pDialog.setTitleText("Calculating....");
-        // pDialog.setCancelable(false);
         pDialog.show();
-        new AsyncTask<Void, Void, Void>() {
+
+        new Handler(Looper.getMainLooper()).postDelayed(new Runnable() {
             @Override
-            protected Void doInBackground(Void... voids) {
-                try {
-                    Thread.sleep(4000);
-                } catch (InterruptedException e) {
-
-                }
-
+            public void run() {
                 pDialog.dismiss();
-                return null;
-            }
-
-            @Override
-            protected void onPostExecute(Void aVoid) {
-                super.onPostExecute(aVoid);
                 textTotal.setVisibility(View.VISIBLE);
                 textLabel.setVisibility(View.VISIBLE);
             }
-        }.execute();
-
-
+        }, 4000);
     }
 }
-
-
